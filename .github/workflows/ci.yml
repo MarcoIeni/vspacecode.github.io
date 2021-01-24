@@ -16,4 +16,7 @@ jobs:
           INPUT_IGNORE: node_modules docs/default-keybindings.md
         with:
           config: '.markdownlint.yaml' 
-          args: '**/*.md'
+          args: >
+            '**/*.md'
+            --ignore node_modules
+            --ignore docs/default-keybindings.md
