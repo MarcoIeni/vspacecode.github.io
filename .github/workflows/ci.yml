@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Lint all files recursively
         uses: avto-dev/markdown-lint@v1
+        env:
+          INPUT_IGNORE: node_modules docs/default-keybindings.md
         with:
           config: '.markdownlint.yaml' 
-          args: "'**/*.md' --ignore node_modules --ignore docs/default-keybindings.md"
+          args: '**/*.md'
